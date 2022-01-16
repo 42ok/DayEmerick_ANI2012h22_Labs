@@ -1,0 +1,28 @@
+PImage img;
+float positionX;
+float positionY;
+
+PFont typo;
+
+void setup()
+{
+  size(400, 600);
+  
+  background(240, 24, 176);
+  
+  typo = loadFont("HelveticaNeue-Medium-64.vlw");
+  
+  positionX = width / 2.0;
+  positionY = 560;
+  img = loadImage("mercredi.jpg");
+}
+
+void draw()
+{
+  image(img, 7, 7);
+  fill(39, 24, 249);
+  textAlign(CENTER, BOTTOM);
+  textSize(24);
+  text("J'aime pas trop les mercredis", positionX, positionY);
+  saveFrame("Lab2.jpg");
+}
